@@ -2,35 +2,38 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Topic;
-use App\Http\Requests\StoreTopicRequest;
-use App\Http\Requests\UpdateTopicRequest;
-use App\Models\CsvQuestion;
-use App\Models\Responser;
+use App\Models\Nlp;
 use Illuminate\Http\Request;
 
-class TopicController extends Controller
+class NlpController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        return Nlp::filter($request);
     }
 
-
-
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreTopicRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTopicRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -38,23 +41,21 @@ class TopicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Topic  $topic
+     * @param  \App\Models\Nlp  $nlp
      * @return \Illuminate\Http\Response
      */
-    public function show(Topic $topic)
+    public function show(Nlp $nlp)
     {
-        if ($topic) {
-            return response(['topics' =>  $topic->getTopics()->get()]);
-        }
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Topic  $topic
+     * @param  \App\Models\Nlp  $nlp
      * @return \Illuminate\Http\Response
      */
-    public function edit(Topic $topic)
+    public function edit(Nlp $nlp)
     {
         //
     }
@@ -62,11 +63,11 @@ class TopicController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateTopicRequest  $request
-     * @param  \App\Models\Topic  $topic
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Nlp  $nlp
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTopicRequest $request, Topic $topic)
+    public function update(Request $request, Nlp $nlp)
     {
         //
     }
@@ -74,10 +75,10 @@ class TopicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Topic  $topic
+     * @param  \App\Models\Nlp  $nlp
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Topic $topic)
+    public function destroy(Nlp $nlp)
     {
         //
     }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CsvController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+
+Route::post('/test/{topic}', [TopicController::class, 'show']);
+
 
 
 Route::prefix('v1')->group(function () {
@@ -46,6 +51,11 @@ Route::prefix('v3')->group(
         Route::group(['middleware' => ['auth:sanctum']], function () {
 
             Route::post('auth/logout', [AuthController::class, 'logout']);
+
+
+            Route::prefix('csv')->group(function () {
+                Route::post('/', [CsvController::class, 'store']);
+            });
 
 
             Route::prefix('nlps')->group(function () {

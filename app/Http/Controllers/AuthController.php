@@ -43,8 +43,7 @@ class AuthController extends Controller
     public function login(UserLoginRequest $request)
     {
         try {
-            return $request;
-            return $payload = $request->all();
+            $payload = $request->all();
 
             $user = User::getUserDecripted($payload['email']);
 

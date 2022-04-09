@@ -4,14 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
-class Topic extends Model
+class Nlp extends Model
 {
-    use HasFactory;
-
-
-    public function getTopics()
+    public static function filter(Request $request)
     {
-        return $this->hasMany(Topic::class);
+        $answares = Topic::where();
     }
 }
