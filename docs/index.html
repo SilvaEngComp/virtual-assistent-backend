@@ -274,7 +274,7 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#GET-api/v3/nlps" @click="highlightSidebar(4)" v-if="!docs[4]['isHidden']">
+                            <a href="#GET-api/v3/topics" @click="highlightSidebar(4)" v-if="!docs[4]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -295,16 +295,16 @@
                                     GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[4]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[4]['responseOk'] === null">api/v3/nlps</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[4]['responseOk'] === null">api/v3/topics</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[4]['responseOk'] === true">
-                                        api/v3/nlps -
+                                        api/v3/topics -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[4]['responseCode'] + ', Took:' + docs[4]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[4]['responseOk'] === false">
-                                        api/v3/nlps -
+                                        api/v3/topics -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[4]['responseCode'] + ', Took:' + docs[4]['responseTime'] + 'ms'">
@@ -316,7 +316,7 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#POST-api/v2/auth/login" @click="highlightSidebar(5)" v-if="!docs[5]['isHidden']">
+                            <a href="#GET-api/v3/topics/{topic}" @click="highlightSidebar(5)" v-if="!docs[5]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -328,25 +328,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text--100 bg--500
-                                    text-black bg-red-500
+                                    text-green-100 bg-green-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    POST
+                                    GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[5]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[5]['responseOk'] === null">api/v2/auth/login</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[5]['responseOk'] === null">api/v3/topics/{topic}</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[5]['responseOk'] === true">
-                                        api/v2/auth/login -
+                                        api/v3/topics/{topic} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[5]['responseCode'] + ', Took:' + docs[5]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[5]['responseOk'] === false">
-                                        api/v2/auth/login -
+                                        api/v3/topics/{topic} -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[5]['responseCode'] + ', Took:' + docs[5]['responseTime'] + 'ms'">
@@ -358,7 +358,7 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#POST-api/v3/auth/logout" @click="highlightSidebar(6)" v-if="!docs[6]['isHidden']">
+                            <a href="#GET-api/v3/nlps" @click="highlightSidebar(6)" v-if="!docs[6]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -370,25 +370,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text--100 bg--500
-                                    text-black bg-red-500
+                                    text-green-100 bg-green-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    POST
+                                    GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[6]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[6]['responseOk'] === null">api/v3/auth/logout</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[6]['responseOk'] === null">api/v3/nlps</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[6]['responseOk'] === true">
-                                        api/v3/auth/logout -
+                                        api/v3/nlps -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[6]['responseCode'] + ', Took:' + docs[6]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[6]['responseOk'] === false">
-                                        api/v3/auth/logout -
+                                        api/v3/nlps -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[6]['responseCode'] + ', Took:' + docs[6]['responseTime'] + 'ms'">
@@ -400,7 +400,7 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#POST-api/v3/csv" @click="highlightSidebar(7)" v-if="!docs[7]['isHidden']">
+                            <a href="#GET-api/v3/users" @click="highlightSidebar(7)" v-if="!docs[7]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -412,25 +412,25 @@
                                     font-bold
                                     leading-none
                                     rounded
-                                    text--100 bg--500
-                                    text-black bg-red-500
+                                    text-green-100 bg-green-500
+                                    text- bg--500
                                     text--100 bg--500
                                     text--100 bg--500
                                     text- bg-
                                     ">
-                                    POST
+                                    GET
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[7]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[7]['responseOk'] === null">api/v3/csv</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[7]['responseOk'] === null">api/v3/users</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[7]['responseOk'] === true">
-                                        api/v3/csv -
+                                        api/v3/users -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[7]['responseCode'] + ', Took:' + docs[7]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[7]['responseOk'] === false">
-                                        api/v3/csv -
+                                        api/v3/users -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[7]['responseCode'] + ', Took:' + docs[7]['responseTime'] + 'ms'">
@@ -442,7 +442,49 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#POST-api/v3/nlps" @click="highlightSidebar(8)" v-if="!docs[8]['isHidden']">
+                            <a href="#GET-api/v3/users/{user}" @click="highlightSidebar(8)" v-if="!docs[8]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text-green-100 bg-green-500
+                                    text- bg--500
+                                    text--100 bg--500
+                                    text--100 bg--500
+                                    text- bg-
+                                    ">
+                                    GET
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[8]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[8]['responseOk'] === null">api/v3/users/{user}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[8]['responseOk'] === true">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[8]['responseOk'] === false">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#POST-api/v2/auth/login" @click="highlightSidebar(9)" v-if="!docs[9]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -462,59 +504,17 @@
                                     ">
                                     POST
                                 </span>
-                                <span class="text-xs" v-bind:class="docs[8]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[8]['responseOk'] === null">api/v3/nlps</span>
-                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[8]['responseOk'] === true">
-                                        api/v3/nlps -
-                                        <span
-                                            class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
-                                        </span>
-                                    </span>
-                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[8]['responseOk'] === false">
-                                        api/v3/nlps -
-                                        <span
-                                            class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[8]['responseCode'] + ', Took:' + docs[8]['responseTime'] + 'ms'">
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>
-                            <a href="#PATCH-api/v2/auth/updatePassword/user/{user}/password/{password}" @click="highlightSidebar(9)" v-if="!docs[9]['isHidden']">
-                                <span class="
-                                    font-medium
-                                    inline-flex
-                                    items-center
-                                    justify-center
-                                    px-2
-                                    py-1
-                                    text-xs
-                                    font-bold
-                                    leading-none
-                                    rounded
-                                    text--100 bg--500
-                                    text- bg--500
-                                    text--100 bg--500
-                                    text-black-100 bg-yellow-500
-                                    text- bg-
-                                    ">
-                                    PATCH
-                                </span>
                                 <span class="text-xs" v-bind:class="docs[9]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[9]['responseOk'] === null">api/v2/auth/updatePassword/user/{user}/password/{password}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[9]['responseOk'] === null">api/v2/auth/login</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[9]['responseOk'] === true">
-                                        api/v2/auth/updatePassword/user/{user}/password/{password} -
+                                        api/v2/auth/login -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[9]['responseCode'] + ', Took:' + docs[9]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[9]['responseOk'] === false">
-                                        api/v2/auth/updatePassword/user/{user}/password/{password} -
+                                        api/v2/auth/login -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[9]['responseCode'] + ', Took:' + docs[9]['responseTime'] + 'ms'">
@@ -526,7 +526,7 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#PATCH-api/v2/auth/register/user/{user}" @click="highlightSidebar(10)" v-if="!docs[10]['isHidden']">
+                            <a href="#POST-api/v3/auth/logout" @click="highlightSidebar(10)" v-if="!docs[10]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -539,24 +539,24 @@
                                     leading-none
                                     rounded
                                     text--100 bg--500
-                                    text- bg--500
+                                    text-black bg-red-500
                                     text--100 bg--500
-                                    text-black-100 bg-yellow-500
+                                    text--100 bg--500
                                     text- bg-
                                     ">
-                                    PATCH
+                                    POST
                                 </span>
                                 <span class="text-xs" v-bind:class="docs[10]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[10]['responseOk'] === null">api/v2/auth/register/user/{user}</span>
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[10]['responseOk'] === null">api/v3/auth/logout</span>
                                     <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[10]['responseOk'] === true">
-                                        api/v2/auth/register/user/{user} -
+                                        api/v3/auth/logout -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[10]['responseCode'] + ', Took:' + docs[10]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                     <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[10]['responseOk'] === false">
-                                        api/v2/auth/register/user/{user} -
+                                        api/v3/auth/logout -
                                         <span
                                             class="inline-flex text-xs"
                                             v-text="'Status:'+docs[10]['responseCode'] + ', Took:' + docs[10]['responseTime'] + 'ms'">
@@ -568,7 +568,133 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#PATCH-api/v3/nlps/{user}" @click="highlightSidebar(11)" v-if="!docs[11]['isHidden']">
+                            <a href="#POST-api/v3/csv" @click="highlightSidebar(11)" v-if="!docs[11]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text-black bg-red-500
+                                    text--100 bg--500
+                                    text--100 bg--500
+                                    text- bg-
+                                    ">
+                                    POST
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[11]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[11]['responseOk'] === null">api/v3/csv</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[11]['responseOk'] === true">
+                                        api/v3/csv -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[11]['responseOk'] === false">
+                                        api/v3/csv -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#POST-api/v3/nlps" @click="highlightSidebar(12)" v-if="!docs[12]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text-black bg-red-500
+                                    text--100 bg--500
+                                    text--100 bg--500
+                                    text- bg-
+                                    ">
+                                    POST
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[12]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[12]['responseOk'] === null">api/v3/nlps</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[12]['responseOk'] === true">
+                                        api/v3/nlps -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[12]['responseOk'] === false">
+                                        api/v3/nlps -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#POST-api/v3/users" @click="highlightSidebar(13)" v-if="!docs[13]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text-black bg-red-500
+                                    text--100 bg--500
+                                    text--100 bg--500
+                                    text- bg-
+                                    ">
+                                    POST
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[13]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[13]['responseOk'] === null">api/v3/users</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[13]['responseOk'] === true">
+                                        api/v3/users -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[13]['responseCode'] + ', Took:' + docs[13]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[13]['responseOk'] === false">
+                                        api/v3/users -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[13]['responseCode'] + ', Took:' + docs[13]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#PATCH-api/v2/auth/updatePassword/user/{user}/password/{password}" @click="highlightSidebar(14)" v-if="!docs[14]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -588,20 +714,20 @@
                                     ">
                                     PATCH
                                 </span>
-                                <span class="text-xs" v-bind:class="docs[11]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[11]['responseOk'] === null">api/v3/nlps/{user}</span>
-                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[11]['responseOk'] === true">
-                                        api/v3/nlps/{user} -
+                                <span class="text-xs" v-bind:class="docs[14]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[14]['responseOk'] === null">api/v2/auth/updatePassword/user/{user}/password/{password}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[14]['responseOk'] === true">
+                                        api/v2/auth/updatePassword/user/{user}/password/{password} -
                                         <span
                                             class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
+                                            v-text="'Status:'+docs[14]['responseCode'] + ', Took:' + docs[14]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
-                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[11]['responseOk'] === false">
-                                        api/v3/nlps/{user} -
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[14]['responseOk'] === false">
+                                        api/v2/auth/updatePassword/user/{user}/password/{password} -
                                         <span
                                             class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[11]['responseCode'] + ', Took:' + docs[11]['responseTime'] + 'ms'">
+                                            v-text="'Status:'+docs[14]['responseCode'] + ', Took:' + docs[14]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                 </span>
@@ -610,7 +736,91 @@
                     </tr>
                                         <tr>
                         <td>
-                            <a href="#DELETE-api/v3/nlps/{user}" @click="highlightSidebar(12)" v-if="!docs[12]['isHidden']">
+                            <a href="#PATCH-api/v3/nlps/{user}" @click="highlightSidebar(15)" v-if="!docs[15]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text- bg--500
+                                    text--100 bg--500
+                                    text-black-100 bg-yellow-500
+                                    text- bg-
+                                    ">
+                                    PATCH
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[15]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[15]['responseOk'] === null">api/v3/nlps/{user}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[15]['responseOk'] === true">
+                                        api/v3/nlps/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[15]['responseCode'] + ', Took:' + docs[15]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[15]['responseOk'] === false">
+                                        api/v3/nlps/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[15]['responseCode'] + ', Took:' + docs[15]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#PATCH-api/v3/users/{user}" @click="highlightSidebar(16)" v-if="!docs[16]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text- bg--500
+                                    text--100 bg--500
+                                    text-black-100 bg-yellow-500
+                                    text- bg-
+                                    ">
+                                    PATCH
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[16]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[16]['responseOk'] === null">api/v3/users/{user}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[16]['responseOk'] === true">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[16]['responseCode'] + ', Took:' + docs[16]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[16]['responseOk'] === false">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[16]['responseCode'] + ', Took:' + docs[16]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#DELETE-api/v3/nlps/{user}" @click="highlightSidebar(17)" v-if="!docs[17]['isHidden']">
                                 <span class="
                                     font-medium
                                     inline-flex
@@ -630,20 +840,62 @@
                                     ">
                                     DELETE
                                 </span>
-                                <span class="text-xs" v-bind:class="docs[12]['isActiveSidebar'] ? 'font-bold':''">
-                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[12]['responseOk'] === null">api/v3/nlps/{user}</span>
-                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[12]['responseOk'] === true">
+                                <span class="text-xs" v-bind:class="docs[17]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[17]['responseOk'] === null">api/v3/nlps/{user}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[17]['responseOk'] === true">
                                         api/v3/nlps/{user} -
                                         <span
                                             class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
+                                            v-text="'Status:'+docs[17]['responseCode'] + ', Took:' + docs[17]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
-                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[12]['responseOk'] === false">
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[17]['responseOk'] === false">
                                         api/v3/nlps/{user} -
                                         <span
                                             class="inline-flex text-xs"
-                                            v-text="'Status:'+docs[12]['responseCode'] + ', Took:' + docs[12]['responseTime'] + 'ms'">
+                                            v-text="'Status:'+docs[17]['responseCode'] + ', Took:' + docs[17]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="#DELETE-api/v3/users/{user}" @click="highlightSidebar(18)" v-if="!docs[18]['isHidden']">
+                                <span class="
+                                    font-medium
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    px-2
+                                    py-1
+                                    text-xs
+                                    font-bold
+                                    leading-none
+                                    rounded
+                                    text--100 bg--500
+                                    text- bg--500
+                                    text--100 bg--500
+                                    text--100 bg--500
+                                    text-white bg-black
+                                    ">
+                                    DELETE
+                                </span>
+                                <span class="text-xs" v-bind:class="docs[18]['isActiveSidebar'] ? 'font-bold':''">
+                                    <span class="text-gray-800 pr-1 pl-1" v-if="docs[18]['responseOk'] === null">api/v3/users/{user}</span>
+                                    <span class="font-bold text-green-600 border rounded-full pr-1 pl-1 border-green-600" v-if="docs[18]['responseOk'] === true">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[18]['responseCode'] + ', Took:' + docs[18]['responseTime'] + 'ms'">
+                                        </span>
+                                    </span>
+                                    <span class="font-bold text-red-600 border rounded-full pr-1 pl-1 border-red-500" v-if="docs[18]['responseOk'] === false">
+                                        api/v3/users/{user} -
+                                        <span
+                                            class="inline-flex text-xs"
+                                            v-text="'Status:'+docs[18]['responseCode'] + ', Took:' + docs[18]['responseTime'] + 'ms'">
                                         </span>
                                     </span>
                                 </span>
@@ -1631,7 +1883,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[4]['isHidden']">
-                <div class="font-sans" id="GET-api/v3/nlps">
+                <div class="font-sans" id="GET-api/v3/topics">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1653,7 +1905,7 @@
                         GET
                     </span>
                     <span class="">
-                        <a href="#api/v3/nlps">api/v3/nlps</a>
+                        <a href="#api/v3/topics">api/v3/topics</a>
                     </span>
                 </h1>
                 </div>
@@ -1668,12 +1920,12 @@
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps">{{window.location.origin}}/api/v3/nlps</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/topics">{{window.location.origin}}/api/v3/topics</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\TopicController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
@@ -1870,7 +2122,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[5]['isHidden']">
-                <div class="font-sans" id="POST-api/v2/auth/login">
+                <div class="font-sans" id="GET-api/v3/topics/{topic}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -1883,16 +2135,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#api/v2/auth/login">api/v2/auth/login</a>
+                        <a href="#api/v3/topics/{topic}">api/v3/topics/{topic}</a>
                     </span>
                 </h1>
                 </div>
@@ -1902,25 +2154,29 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v2/auth/login">{{window.location.origin}}/api/v2/auth/login</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/topics/{topic}">{{window.location.origin}}/api/v3/topics/{topic}</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\AuthController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\TopicController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@login</td>
+                            <td class="align-left pl-2 pr-2 break-all">@show</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -1929,58 +2185,6 @@
                     <vue-markdown></vue-markdown>
                 </div>
                 <br>
-                                <table class="table-fixed align-left text-sm mt-5">
-                    <thead class="border">
-                    <tr class="border">
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
-                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            email
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
-                                                                                                                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                                                email
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        <tr class="border">
-                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
-                            password
-                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
-                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2">
-                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
-                                                                                                                                                                                    </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
-                                                                                                                </td>
-                        <td class="border pl-3 pr-2 break-all">
-                            <div class="font-mono">
-                                                                                                                                                                                                                                                                                                                min:5
-                                                                                                                                                                                    </div>
-                        </td>
-                    </tr>
-                                        </tbody>
-                </table>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
                     v-if="!docs[5]['try']"
@@ -2017,14 +2221,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[5]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[5]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -2165,7 +2361,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[6]['isHidden']">
-                <div class="font-sans" id="POST-api/v3/auth/logout">
+                <div class="font-sans" id="GET-api/v3/nlps">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2178,16 +2374,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#api/v3/auth/logout">api/v3/auth/logout</a>
+                        <a href="#api/v3/nlps">api/v3/nlps</a>
                     </span>
                 </h1>
                 </div>
@@ -2197,21 +2393,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/auth/logout">{{window.location.origin}}/api/v3/auth/logout</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps">{{window.location.origin}}/api/v3/nlps</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\AuthController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\NlpController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@logout</td>
+                            <td class="align-left pl-2 pr-2 break-all">@index</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -2264,14 +2460,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[6]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[6]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -2412,7 +2600,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[7]['isHidden']">
-                <div class="font-sans" id="POST-api/v3/csv">
+                <div class="font-sans" id="GET-api/v3/users">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2425,16 +2613,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#api/v3/csv">api/v3/csv</a>
+                        <a href="#api/v3/users">api/v3/users</a>
                     </span>
                 </h1>
                 </div>
@@ -2444,21 +2632,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/csv">{{window.location.origin}}/api/v3/csv</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/users">{{window.location.origin}}/api/v3/users</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\CsvController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@store</td>
+                            <td class="align-left pl-2 pr-2 break-all">@index</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -2511,14 +2699,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[7]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[7]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -2659,7 +2839,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[8]['isHidden']">
-                <div class="font-sans" id="POST-api/v3/nlps">
+                <div class="font-sans" id="GET-api/v3/users/{user}">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2672,16 +2852,16 @@
                         font-bold
                         leading-none
                         rounded
-                        text--100 bg--500
-                        text-black bg-red-500
+                        text-green-100 bg-green-500
+                        text- bg--500
                         text--100 bg--500
                         text--100 bg--500
                         text- bg-
                         ">
-                        POST
+                        GET
                     </span>
                     <span class="">
-                        <a href="#api/v3/nlps">api/v3/nlps</a>
+                        <a href="#api/v3/users/{user}">api/v3/users/{user}</a>
                     </span>
                 </h1>
                 </div>
@@ -2691,12 +2871,12 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">GET</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps">{{window.location.origin}}/api/v3/nlps</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/users/{user}">{{window.location.origin}}/api/v3/users/{user}</a>
                             </td>
                         </tr>
                         <tr>
@@ -2705,7 +2885,7 @@
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@store</td>
+                            <td class="align-left pl-2 pr-2 break-all">@show</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -2758,14 +2938,6 @@
                             style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
                             v-model="docs[8]['url']" :highlight="highlighter" line-numbers></prism-editor>
                             <br>
-                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
-                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
-                            <prism-editor
-                                class="my-prism-editor"
-                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
-                                v-model="docs[8]['body']"
-                                :highlight="highlighter"
-                                line-numbers></prism-editor>
                                                     </div>
                     </div>
                     <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
@@ -2906,7 +3078,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[9]['isHidden']">
-                <div class="font-sans" id="PATCH-api/v2/auth/updatePassword/user/{user}/password/{password}">
+                <div class="font-sans" id="POST-api/v2/auth/login">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -2920,15 +3092,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text- bg--500
+                        text-black bg-red-500
                         text--100 bg--500
-                        text-black-100 bg-yellow-500
+                        text--100 bg--500
                         text- bg-
                         ">
-                        PATCH
+                        POST
                     </span>
                     <span class="">
-                        <a href="#api/v2/auth/updatePassword/user/{user}/password/{password}">api/v2/auth/updatePassword/user/{user}/password/{password}</a>
+                        <a href="#api/v2/auth/login">api/v2/auth/login</a>
                     </span>
                 </h1>
                 </div>
@@ -2938,12 +3110,12 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v2/auth/updatePassword/user/{user}/password/{password}">{{window.location.origin}}/api/v2/auth/updatePassword/user/{user}/password/{password}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v2/auth/login">{{window.location.origin}}/api/v2/auth/login</a>
                             </td>
                         </tr>
                         <tr>
@@ -2952,7 +3124,7 @@
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@updatePassword</td>
+                            <td class="align-left pl-2 pr-2 break-all">@login</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -2965,6 +3137,58 @@
                     <vue-markdown></vue-markdown>
                 </div>
                 <br>
+                                <table class="table-fixed align-left text-sm mt-5">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            email
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                email
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                            <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-green-100 bg-green-500 rounded">String</span>
+                                                                                                                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                                                                                                                                min:5
+                                                                                                                                                                                    </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
                                 <button
                     class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
                     v-if="!docs[9]['try']"
@@ -3149,7 +3373,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[10]['isHidden']">
-                <div class="font-sans" id="PATCH-api/v2/auth/register/user/{user}">
+                <div class="font-sans" id="POST-api/v3/auth/logout">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3163,15 +3387,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text- bg--500
+                        text-black bg-red-500
                         text--100 bg--500
-                        text-black-100 bg-yellow-500
+                        text--100 bg--500
                         text- bg-
                         ">
-                        PATCH
+                        POST
                     </span>
                     <span class="">
-                        <a href="#api/v2/auth/register/user/{user}">api/v2/auth/register/user/{user}</a>
+                        <a href="#api/v3/auth/logout">api/v3/auth/logout</a>
                     </span>
                 </h1>
                 </div>
@@ -3181,25 +3405,29 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v2/auth/register/user/{user}">{{window.location.origin}}/api/v2/auth/register/user/{user}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/auth/logout">{{window.location.origin}}/api/v3/auth/logout</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\AuthController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@update</td>
+                            <td class="align-left pl-2 pr-2 break-all">@logout</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
                                 <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
                             </tr>
                                             </tbody>
                 </table>
@@ -3392,7 +3620,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[11]['isHidden']">
-                <div class="font-sans" id="PATCH-api/v3/nlps/{user}">
+                <div class="font-sans" id="POST-api/v3/csv">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3406,15 +3634,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text- bg--500
+                        text-black bg-red-500
                         text--100 bg--500
-                        text-black-100 bg-yellow-500
+                        text--100 bg--500
                         text- bg-
                         ">
-                        PATCH
+                        POST
                     </span>
                     <span class="">
-                        <a href="#api/v3/nlps/{user}">api/v3/nlps/{user}</a>
+                        <a href="#api/v3/csv">api/v3/csv</a>
                     </span>
                 </h1>
                 </div>
@@ -3424,21 +3652,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps/{user}">{{window.location.origin}}/api/v3/nlps/{user}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/csv">{{window.location.origin}}/api/v3/csv</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\CsvController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@update</td>
+                            <td class="align-left pl-2 pr-2 break-all">@store</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -3639,7 +3867,7 @@
                   </div>
             </section>
                         <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[12]['isHidden']">
-                <div class="font-sans" id="DELETE-api/v3/nlps/{user}">
+                <div class="font-sans" id="POST-api/v3/nlps">
                 <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
                     <span class="w-20
                         font-medium
@@ -3653,15 +3881,15 @@
                         leading-none
                         rounded
                         text--100 bg--500
-                        text- bg--500
+                        text-black bg-red-500
                         text--100 bg--500
                         text--100 bg--500
-                        text-white bg-black
+                        text- bg-
                         ">
-                        DELETE
+                        POST
                     </span>
                     <span class="">
-                        <a href="#api/v3/nlps/{user}">api/v3/nlps/{user}</a>
+                        <a href="#api/v3/nlps">api/v3/nlps</a>
                     </span>
                 </h1>
                 </div>
@@ -3671,21 +3899,21 @@
                     <tbody>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
-                            <td class="align-left pl-2 pr-2 font-bold break-all">DELETE</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
                             <td class="align-left pl-2 pr-2 break-all">
-                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps/{user}">{{window.location.origin}}/api/v3/nlps/{user}</a>
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps">{{window.location.origin}}/api/v3/nlps</a>
                             </td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
-                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\NlpController</td>
                         </tr>
                         <tr>
                             <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
-                            <td class="align-left pl-2 pr-2 break-all">@destroy</td>
+                            <td class="align-left pl-2 pr-2 break-all">@store</td>
                         </tr>
                                                     <tr>
                                 <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
@@ -3885,6 +4113,1549 @@
                     </div>
                   </div>
             </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[13]['isHidden']">
+                <div class="font-sans" id="POST-api/v3/users">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text-black bg-red-500
+                        text--100 bg--500
+                        text--100 bg--500
+                        text- bg-
+                        ">
+                        POST
+                    </span>
+                    <span class="">
+                        <a href="#api/v3/users">api/v3/users</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">POST</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/users">{{window.location.origin}}/api/v3/users</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@store</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[13]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <table class="table-fixed align-left text-sm mt-5">
+                    <thead class="border">
+                    <tr class="border">
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">No.</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Attributes</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Type</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Nullable</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Bail</th>
+                        <th class="border border-gray-300 pl-2 pr-16 pt-1 pb-1 w-min text-left bg-gray-200">Rules</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">1</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            name
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">2</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            email
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        <tr class="border">
+                        <td class="border pl-3 pt-1 pb-1 pr-2">3</td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-200">
+                            password
+                                                                                            <sup class="text-red-500 font-bold"> *required</sup>
+                                                                                    </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2">
+                                                                                                                                                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 bg-gray-100 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pt-1 pb-1 pr-2 text-center">
+                                                                                                                </td>
+                        <td class="border pl-3 pr-2 break-all">
+                            <div class="font-mono">
+                                                                                                                                                                                                            </div>
+                        </td>
+                    </tr>
+                                        </tbody>
+                </table>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[13]['try']"
+                    v-on:click="docs[13]['try'] = !docs[13]['try'];docs[13]['cancel'] = !docs[13]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[13]['cancel']"
+                    v-on:click="docs[13]['cancel'] = !docs[13]['cancel'];docs[13]['try'] = !docs[13]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[13]['try']"
+                    @click="request(docs[13])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[13]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[13]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[13]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[13]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[13]['response'] && !docs[13]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[13]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[13]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[13]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[13]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[13]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[13]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[13]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[13]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[13]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[13]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[13]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[13]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[13]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[13]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[13]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[13]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[13]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[13]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[13]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[14]['isHidden']">
+                <div class="font-sans" id="PATCH-api/v2/auth/updatePassword/user/{user}/password/{password}">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text- bg--500
+                        text--100 bg--500
+                        text-black-100 bg-yellow-500
+                        text- bg-
+                        ">
+                        PATCH
+                    </span>
+                    <span class="">
+                        <a href="#api/v2/auth/updatePassword/user/{user}/password/{password}">api/v2/auth/updatePassword/user/{user}/password/{password}</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v2/auth/updatePassword/user/{user}/password/{password}">{{window.location.origin}}/api/v2/auth/updatePassword/user/{user}/password/{password}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\AuthController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@updatePassword</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[14]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[14]['try']"
+                    v-on:click="docs[14]['try'] = !docs[14]['try'];docs[14]['cancel'] = !docs[14]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[14]['cancel']"
+                    v-on:click="docs[14]['cancel'] = !docs[14]['cancel'];docs[14]['try'] = !docs[14]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[14]['try']"
+                    @click="request(docs[14])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[14]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[14]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[14]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[14]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[14]['response'] && !docs[14]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[14]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[14]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[14]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[14]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[14]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[14]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[14]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[14]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[14]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[14]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[14]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[14]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[14]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[14]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[14]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[14]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[14]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[14]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[14]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[15]['isHidden']">
+                <div class="font-sans" id="PATCH-api/v3/nlps/{user}">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text- bg--500
+                        text--100 bg--500
+                        text-black-100 bg-yellow-500
+                        text- bg-
+                        ">
+                        PATCH
+                    </span>
+                    <span class="">
+                        <a href="#api/v3/nlps/{user}">api/v3/nlps/{user}</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps/{user}">{{window.location.origin}}/api/v3/nlps/{user}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\NlpController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@update</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[15]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[15]['try']"
+                    v-on:click="docs[15]['try'] = !docs[15]['try'];docs[15]['cancel'] = !docs[15]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[15]['cancel']"
+                    v-on:click="docs[15]['cancel'] = !docs[15]['cancel'];docs[15]['try'] = !docs[15]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[15]['try']"
+                    @click="request(docs[15])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[15]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[15]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[15]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[15]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[15]['response'] && !docs[15]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[15]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[15]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[15]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[15]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[15]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[15]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[15]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[15]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[15]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[15]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[15]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[15]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[15]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[15]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[15]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[15]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[15]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[15]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[15]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[16]['isHidden']">
+                <div class="font-sans" id="PATCH-api/v3/users/{user}">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text- bg--500
+                        text--100 bg--500
+                        text-black-100 bg-yellow-500
+                        text- bg-
+                        ">
+                        PATCH
+                    </span>
+                    <span class="">
+                        <a href="#api/v3/users/{user}">api/v3/users/{user}</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">PATCH</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/users/{user}">{{window.location.origin}}/api/v3/users/{user}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@update</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[16]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[16]['try']"
+                    v-on:click="docs[16]['try'] = !docs[16]['try'];docs[16]['cancel'] = !docs[16]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[16]['cancel']"
+                    v-on:click="docs[16]['cancel'] = !docs[16]['cancel'];docs[16]['try'] = !docs[16]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[16]['try']"
+                    @click="request(docs[16])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[16]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[16]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[16]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[16]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[16]['response'] && !docs[16]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[16]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[16]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[16]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[16]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[16]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[16]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[16]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[16]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[16]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[16]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[16]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[16]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[16]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[16]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[16]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[16]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[16]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[16]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[16]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[17]['isHidden']">
+                <div class="font-sans" id="DELETE-api/v3/nlps/{user}">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text- bg--500
+                        text--100 bg--500
+                        text--100 bg--500
+                        text-white bg-black
+                        ">
+                        DELETE
+                    </span>
+                    <span class="">
+                        <a href="#api/v3/nlps/{user}">api/v3/nlps/{user}</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">DELETE</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/nlps/{user}">{{window.location.origin}}/api/v3/nlps/{user}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\NlpController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@destroy</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[17]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[17]['try']"
+                    v-on:click="docs[17]['try'] = !docs[17]['try'];docs[17]['cancel'] = !docs[17]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[17]['cancel']"
+                    v-on:click="docs[17]['cancel'] = !docs[17]['cancel'];docs[17]['try'] = !docs[17]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[17]['try']"
+                    @click="request(docs[17])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[17]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[17]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[17]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[17]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[17]['response'] && !docs[17]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[17]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[17]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[17]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[17]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[17]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[17]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[17]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[17]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[17]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[17]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[17]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[17]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[17]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[17]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[17]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[17]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[17]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[17]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[17]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
+                        <section class="pt-5 pl-2 pr-2 pb-5 border mb-10 rounded bg-white shadow" v-if="!docs[18]['isHidden']">
+                <div class="font-sans" id="DELETE-api/v3/users/{user}">
+                <h1 class="text-sm break-normal text-black bg-indigo-50 break-normal font-sans pb-1 pt-1 text-black">
+                    <span class="w-20
+                        font-medium
+                        inline-flex
+                        items-center
+                        justify-center
+                        px-2
+                        py-1
+                        text-xs
+                        font-bold
+                        leading-none
+                        rounded
+                        text--100 bg--500
+                        text- bg--500
+                        text--100 bg--500
+                        text--100 bg--500
+                        text-white bg-black
+                        ">
+                        DELETE
+                    </span>
+                    <span class="">
+                        <a href="#api/v3/users/{user}">api/v3/users/{user}</a>
+                    </span>
+                </h1>
+                </div>
+                <hr class="border-b border-grey-light">
+
+                <table class="table-fixed text-sm mt-5">
+                    <tbody>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">HTTP Method</td>
+                            <td class="align-left pl-2 pr-2 font-bold break-all">DELETE</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">URL</td>
+                            <td class="align-left pl-2 pr-2 break-all">
+                                <a target="_blank" href="{{window.location.origin}}/api/v3/users/{user}">{{window.location.origin}}/api/v3/users/{user}</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller</td>
+                            <td class="align-left pl-2 pr-2 break-all">App\Http\Controllers\UserController</td>
+                        </tr>
+                        <tr>
+                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Controller Method</td>
+                            <td class="align-left pl-2 pr-2 break-all">@destroy</td>
+                        </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 1</td>
+                                <td class="align-left pl-2 pr-2 break-all">api</td>
+                            </tr>
+                                                    <tr>
+                                <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Middleware 2</td>
+                                <td class="align-left pl-2 pr-2 break-all">auth:sanctum</td>
+                            </tr>
+                                            </tbody>
+                </table>
+                <div v-if="docs[18]['docBlock']" class="border-2 mr-4 mt-4 p-4 rounded text-sm">
+                    <h3 class="font-bold">LRD Docs</h3>
+                    <vue-markdown></vue-markdown>
+                </div>
+                <br>
+                                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[18]['try']"
+                    v-on:click="docs[18]['try'] = !docs[18]['try'];docs[18]['cancel'] = !docs[18]['cancel']"
+                >
+                    Try
+                </button>
+
+                <button
+                    class="hover:bg-red-500 font-semibold hover:text-white mt-2 pl-5 pr-5 border-gray-700 hover:border-transparent shadow-inner border-2 rounded-full"
+                    v-if="!docs[18]['cancel']"
+                    v-on:click="docs[18]['cancel'] = !docs[18]['cancel'];docs[18]['try'] = !docs[18]['try'];"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    v-if="docs[18]['try']"
+                    @click="request(docs[18])"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold mt-2 border-blue-800 border-2 shadow-inner mb-1 pl-5 pr-5 rounded-full"
+                >
+                    <svg
+                        v-if="docs[18]['loading']"
+                        class="animate-spin h-4 w-4 rounded-full bg-transparent border-2 border-transparent border-opacity-50 inline pr-2" style="border-right-color: white; border-top-color: white;" viewBox="0 0 24 24"></svg>
+                    Run
+                </button>
+
+                <div class="grid grid-cols-1 mt-3 pr-2 overflow-auto">
+                    <div class="">
+                        <div v-if="docs[18]['try']">
+                            <h3 class="font-medium">REQUEST URL<sup class="text-red-500 font-bold"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">Enter your request URL with query params</p>
+                            <prism-editor class="my-prism-editor"
+                            style="padding:15px 0px 15px 0px;min-height:20px;background:#2d2d2d;color: #ccc;resize:both;"
+                            v-model="docs[18]['url']" :highlight="highlighter" line-numbers></prism-editor>
+                            <br>
+                                                        <h3 class="font-medium">REQUEST BODY<sup class="text-red-500"> *required</sup></h3>
+                            <p class="text-xs pb-2 font-medium text-gray-500">JSON body for the POST|PUT|DELETE request</p>
+                            <prism-editor
+                                class="my-prism-editor"
+                                style="min-height:200px;background:#2d2d2d;color: #ccc;resize:both"
+                                v-model="docs[18]['body']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                                                    </div>
+                    </div>
+                    <hr class="border-b border-dotted mt-4 mb-2 border-gray-300">
+                    <div class="grid grid-cols-2 gap-2" v-if="docs[18]['response'] && !docs[18]['cancel']">
+                        <div class="border-r-2">
+                            <h3 class="font-medium">
+                                RESPONSE
+                                <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                    Response status, code and time.
+                                </p>
+                            </h3>
+                            <table class="table-fixed text-sm mt-5">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                            v-if="docs[18]['responseOk']"
+                                            class="inline-flex  text-xs font-bold leading-none text-green-700">
+                                                SUCCESS
+                                            </span>
+                                            <span
+                                                v-if="!docs[18]['responseOk']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-500 rounded">
+                                                ERROR
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Status Code</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[18]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-green-900"
+                                                v-text="docs[18]['responseCode']">
+                                            </span>
+                                            <span
+                                                v-if="!docs[18]['responseOk']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[18]['responseCode']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Memory Usage</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[18]['memory']"
+                                                class="inline-flex text-xs font-bold text-red-900"
+                                                v-text="docs[18]['memory']">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Response Time</td>
+                                        <td class="align-left pl-2 pr-2 break-all">
+                                            <span
+                                                v-if="docs[18]['responseTime']"
+                                                class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded"
+                                                v-text="docs[18]['responseTime'] + 'ms'">
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-xs pt-2 pb-2 font-medium text-gray-500">
+                                Response headers.
+                            </p>
+                            <prism-editor
+                                v-if="docs[18]['responseHeaders']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="width:75%;min-height:100px;max-height:200px;background:#fefefe;color: rgb(66, 63, 63);resize:both"
+                                readonly
+                                v-model="docs[18]['responseHeaders']"
+                                :highlight="highlighterAtom"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div>
+                            <p class="text-xs pb-2 font-medium text-gray-800">Response from the server</p>
+                            <prism-editor
+                                v-if="docs[18]['response']"
+                                class="my-prism-editor shadow-inner border-gray-400 border-2 rounded"
+                                style="min-height:100px;max-height:300px;background:#2d2d2d;color: #ccc;resize:both"
+                                readonly
+                                v-model="docs[18]['response']"
+                                :highlight="highlighter"
+                                line-numbers></prism-editor>
+                        </div>
+                        <div class="border-r-2">
+                            <h3 class="font-medium mt-10">
+                                SQL
+                            </h3>
+                            <p v-if="!docs[18]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                No SQL queries executed for this request.
+                            </p>
+                            <p v-if="docs[18]['queries'].length" class="text-xs pb-2 font-medium text-gray-500">
+                                SQL queries executed for this request.
+                                <table class="table-fixed text-sm mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Queries</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <div v-text="docs[18]['queries'].length"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="align-left pl-2 pr-2 bg-gray-100 border-r-2">Total Query time</td>
+                                            <td class="align-left pl-2 pr-2 break-all">
+                                                <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-400 rounded">
+                                                    <span v-text="docs[18]['queries'].reduce((total, query) => total + query.time, 0).toFixed(2)"></span>ms
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="">
+                                <p class="text-xs mt-10 font-medium text-gray-500">
+                                    SQL queries
+                                </p>
+                                <div v-for="(query, index) in docs[18]['queries']">
+                                    <p class="mt-2 text-sm font-medium">{{index+1}}.
+                                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-gray-800 bg-yellow-500 rounded mb-1">
+                                            {{query.time}}ms
+                                        </span>
+                                    </p>
+                                    <prism-editor
+                                        v-model="sqlFormatter.format(query['sql'])"
+                                        class="my-prism-editor"
+                                        style="padding:10px 0px 10px 0px;min-height:20px;max-height:350px;background:rgb(52 33 33);color: #ccc;resize:both;"
+                                        readonly
+                                        :highlight="highlighter"
+                                        line-numbers></prism-editor>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+            </section>
                      </div>
       </div>
       <script>
@@ -3934,7 +5705,7 @@
 
             return validations
         }
-        var docs = [{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"],"middlewares":["web"],"controller":"CsrfCookieController","controller_full_path":"Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController","method":"show","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/users","methods":["GET","HEAD"],"middlewares":["api"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/topics","methods":["GET","HEAD"],"middlewares":["api"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/tags","methods":["GET","HEAD"],"middlewares":["api"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v2\/auth\/login","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"login","httpMethod":"POST","rules":{"email":["required|string|email"],"password":["required|string|min:5"]},"docBlock":""},{"uri":"api\/v3\/auth\/logout","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"logout","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v3\/csv","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"CsvController","controller_full_path":"App\\Http\\Controllers\\CsvController","method":"store","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"store","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v2\/auth\/updatePassword\/user\/{user}\/password\/{password}","methods":["PATCH"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"updatePassword","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v2\/auth\/register\/user\/{user}","methods":["PATCH"],"middlewares":["api"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"update","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps\/{user}","methods":["PATCH"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"update","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps\/{user}","methods":["DELETE"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"destroy","httpMethod":"DELETE","rules":[],"docBlock":""}];
+        var docs = [{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"],"middlewares":["web"],"controller":"CsrfCookieController","controller_full_path":"Laravel\\Sanctum\\Http\\Controllers\\CsrfCookieController","method":"show","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/users","methods":["GET","HEAD"],"middlewares":["api"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/topics","methods":["GET","HEAD"],"middlewares":["api"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v1\/tags","methods":["GET","HEAD"],"middlewares":["api"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/topics","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/topics\/{topic}","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"TopicController","controller_full_path":"App\\Http\\Controllers\\TopicController","method":"show","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"NlpController","controller_full_path":"App\\Http\\Controllers\\NlpController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/users","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"index","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v3\/users\/{user}","methods":["GET","HEAD"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"show","httpMethod":"GET","rules":[],"docBlock":""},{"uri":"api\/v2\/auth\/login","methods":["POST"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"login","httpMethod":"POST","rules":{"email":["required|string|email"],"password":["required|string|min:5"]},"docBlock":""},{"uri":"api\/v3\/auth\/logout","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"logout","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v3\/csv","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"CsvController","controller_full_path":"App\\Http\\Controllers\\CsvController","method":"store","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"NlpController","controller_full_path":"App\\Http\\Controllers\\NlpController","method":"store","httpMethod":"POST","rules":[],"docBlock":""},{"uri":"api\/v3\/users","methods":["POST"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"store","httpMethod":"POST","rules":{"name":["required"],"email":["required"],"password":["required"]},"docBlock":""},{"uri":"api\/v2\/auth\/updatePassword\/user\/{user}\/password\/{password}","methods":["PATCH"],"middlewares":["api"],"controller":"AuthController","controller_full_path":"App\\Http\\Controllers\\AuthController","method":"updatePassword","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps\/{user}","methods":["PATCH"],"middlewares":["api","auth:sanctum"],"controller":"NlpController","controller_full_path":"App\\Http\\Controllers\\NlpController","method":"update","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v3\/users\/{user}","methods":["PATCH"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"update","httpMethod":"PATCH","rules":[],"docBlock":""},{"uri":"api\/v3\/nlps\/{user}","methods":["DELETE"],"middlewares":["api","auth:sanctum"],"controller":"NlpController","controller_full_path":"App\\Http\\Controllers\\NlpController","method":"destroy","httpMethod":"DELETE","rules":[],"docBlock":""},{"uri":"api\/v3\/users\/{user}","methods":["DELETE"],"middlewares":["api","auth:sanctum"],"controller":"UserController","controller_full_path":"App\\Http\\Controllers\\UserController","method":"destroy","httpMethod":"DELETE","rules":[],"docBlock":""}];
         var app_url = "http:\/\/localhost";
 
         //remove trailing slash if any
