@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Responser;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUserRequest;
 
 class UserController extends Controller
 {
@@ -17,7 +18,7 @@ class UserController extends Controller
     {
         // $users = User::get();
         // return Responser::success(null, 'Users');
-        return "List of Users";
+        return User::get();
     }
 
     /**
@@ -26,9 +27,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+
+        $payload = $request->all();
+        $payload["password"] = bcrypt($payload["password"]);
+        $user = User::create($payload);
+        return $user;
     }
 
     /**
@@ -39,7 +44,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        if ($user) {
+            return $user;
+        }
     }
 
     /**
@@ -62,6 +69,8 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        if ($user) {
+            $user->delete();
+        }
     }
 }

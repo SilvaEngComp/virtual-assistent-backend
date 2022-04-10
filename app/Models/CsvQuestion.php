@@ -13,7 +13,7 @@ class CsvQuestion
 
     function __construct(array $csvData)
     {
-        if (count($csvData) === 3) {
+        if (count($csvData) >= 3) {
             $this->setDescription($csvData[0]);
             $this->setAnsware($csvData[1]);
             $this->setPath($csvData[2]);

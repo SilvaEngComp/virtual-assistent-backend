@@ -4,13 +4,13 @@ namespace App\Models;
 
 class Menu
 {
-    public string $tag;
+    public string $name;
     public array $questions;
     public array $submenu;
 
-    function __construct($tag = '')
+    function __construct($name = '')
     {
-        $this->tag = $tag;
+        $this->name = $name;
         $this->questions = [];
         $this->submenu = [];
     }
@@ -19,7 +19,7 @@ class Menu
     public function build()
     {
         return [
-            "tag" => $this->getTag(),
+            "name" => $this->getName(),
             "submenu" => $this->getSubmenu(),
             "questions" => $this->getQuestions(),
         ];
@@ -56,7 +56,7 @@ class Menu
      */
     public function getQuestions()
     {
-        return json_encode($this->questions);
+        return $this->questions;
     }
 
     /**
@@ -79,25 +79,25 @@ class Menu
 
 
     /**
-     * Get the value of tag
+     * Get the value of name
      *
      * @return string
      */
-    public function getTag(): string
+    public function getName(): string
     {
-        return $this->tag;
+        return $this->name;
     }
 
     /**
-     * Set the value of tag
+     * Set the value of name
      *
-     * @param string $tag
+     * @param string $name
      *
      * @return self
      */
-    public function setTag(string $tag): self
+    public function setName(string $name): self
     {
-        $this->tag = $tag;
+        $this->name = $name;
 
         return $this;
     }

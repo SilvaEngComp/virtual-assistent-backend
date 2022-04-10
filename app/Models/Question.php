@@ -2,56 +2,23 @@
 
 namespace App\Models;
 
-class Question
+use Illuminate\Database\Eloquent\Model;
+
+class Question extends Model
 {
-    private string $description;
-    private string $answare;
+
+    protected $fillable = [
+        "description",
+        "answare",
+        "topic_id"
+    ];
 
     /**
-     * Get the value of answare
+     * The attributes that should be hidden for serialization.
      *
-     * @return  string
+     * @var array<int, string>
      */
-    public function getAnsware()
-    {
-        return $this->answare;
-    }
-
-    /**
-     * Set the value of answare
-     *
-     * @param  string  $answare
-     *
-     * @return  self
-     */
-    public function setAnsware(string $answare)
-    {
-        $this->answare = $answare;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of description
-     *
-     * @return  string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set the value of description
-     *
-     * @param  string  $description
-     *
-     * @return  self
-     */
-    public function setDescription(string $description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
+    protected $hidden = [
+        'created_at', 'updated_at',
+    ];
 }

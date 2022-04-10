@@ -6,6 +6,8 @@ use App\Models\Topic;
 use App\Http\Requests\StoreTopicRequest;
 use App\Http\Requests\UpdateTopicRequest;
 use App\Models\CsvQuestion;
+use App\Models\Menu;
+use App\Models\Question;
 use App\Models\Responser;
 use Illuminate\Http\Request;
 
@@ -18,10 +20,8 @@ class TopicController extends Controller
      */
     public function index()
     {
+        return  Topic::with('questions')->get()->toTree();
     }
-
-
-
 
 
     /**
@@ -44,7 +44,10 @@ class TopicController extends Controller
     public function show(Topic $topic)
     {
         if ($topic) {
-            return response(['topics' =>  $topic->getTopics()->get()]);
+            return response([
+                'topics' =>  $topic->getTopics()->get(),
+                'questions' =>  $topic->getQuestions(),
+            ]);
         }
     }
 

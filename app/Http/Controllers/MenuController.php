@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use App\Models\Question;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,16 +19,16 @@ class MenuController extends Controller
     public static function build($csvQuestions)
     {
 
-        $path = self::getTags($csvQuestions);
+        $path = self::getNames($csvQuestions);
 
 
         $root = new Menu();
 
-        foreach ($path as $subTags) {
-
+        foreach ($path as $subNames) {
+            self::regiterTopic($subNames);
             $questions = array();
             foreach ($csvQuestions as $csvQuestion) {
-                if ($csvQuestion["path"] === $subTags) {
+                if ($csvQuestion["path"] === $subNames) {
                     array_push(
                         $questions,
                         $csvQuestion
@@ -33,14 +36,14 @@ class MenuController extends Controller
                 }
             }
 
-            $menu = self::menuBuild($root, $subTags, $questions);
+            $menu = self::menuBuild($root, $subNames, $questions);
             $root->setSubmenu($menu);
         }
         return response(['menu' => $root]);
     }
 
 
-    public static function getTags($csvQuestions)
+    public static function getNames($csvQuestions)
     {
         $path = array();
         foreach ($csvQuestions as $csvQuestion) {
@@ -55,17 +58,16 @@ class MenuController extends Controller
 
     public static function menuBuild(Menu | null $root, array $path, array $questions)
     {
-        // self::regiterTopic($root);
 
         if (!is_null($root)) {
-            $removedTag = null;
+            $removedName = null;
             if (!isset($path) || count($path) > 0) {
-                $removedTag = $path[0];
+                $removedName = $path[0];
 
                 $result = array_splice($path, 1);
 
-                if ($root->getTag() === '') {
-                    $root->setTag($removedTag);
+                if ($root->getName() === '') {
+                    $root->setName($removedName);
                 }
                 if (count($result) > 0) {
                     $submenu = new Menu();
@@ -75,8 +77,10 @@ class MenuController extends Controller
                 } else {
                     $root->setSubmenu(null);
                     if (!is_null($root)) {
-                        if ($root->getTag() == end($questions[0]["path"])) {
+                        if ($root->getName() == end($questions[0]["path"])) {
+
                             $root->setQuestions($questions);
+                            self::regiterQuestion($root);
                         }
                     }
 
@@ -93,13 +97,41 @@ class MenuController extends Controller
     }
 
 
-    public static function regiterTopic(Menu $menu)
+    public static function regiterTopic(array $topicNames)
     {
-        if ($menu) {
-            if (!Topic::where('description', $menu->getTag())->exists()) {
-                echo "\n not exists" . $menu->getTag();
+        if ($topicNames) {
+            $parent = null;
+            foreach ($topicNames as $name) {
+
+                $topic = Topic::where('name', $name)->first();
+                if (!$topic) {
+                    $topic = Topic::create([
+                        "name" => $name,
+                    ]);
+                }
+                if ($parent) {
+                    $node = Topic::find($parent);
+
+                    $node->appendNode($topic);
+                }
+                $parent = $topic->id;
             }
         }
-        echo "\n alheardy exists" . $menu->getTag();
+    }
+    public static function regiterQuestion(Menu $menu)
+    {
+        if ($menu) {
+            $topic = Topic::where('name', $menu->getName())->first();
+            foreach ($menu->getQuestions() as $question) {
+                $topic = Topic::where('name', $menu->getName())->first();
+                if ($topic) {
+                    Question::create([
+                        "description" => $question["description"],
+                        "answare" => $question["answare"],
+                        "topic_id" => $topic->id
+                    ]);
+                }
+            }
+        }
     }
 }
