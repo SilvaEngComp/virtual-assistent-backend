@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CsvController;
 use App\Http\Controllers\NlpController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -57,17 +58,15 @@ Route::prefix('v3')->group(
             });
 
             Route::prefix('topics')->group(function () {
-                Route::get('/', [TopicController::class, 'index']);
+                Route::get('/', [TopicController::class, 'index'])->name('getAllTopics');
                 Route::get('/{topic}', [TopicController::class, 'show']);
             });
 
-
-            Route::prefix('nlps')->group(function () {
-                Route::get("/", [NlpController::class, "index"]);
-                Route::post("/", [NlpController::class, "store"]);
-                Route::patch("/{user}", [NlpController::class, "update"]);
-                Route::delete("/{user}", [NlpController::class, "destroy"]);
+            Route::prefix('questions')->group(function () {
+                Route::post('/', [QuestionController::class, 'store']);
+                Route::patch('/', [QuestionController::class, 'update']);
             });
+
 
             Route::prefix('users')->group(function () {
                 Route::get("/", [UserController::class, "index"]);
