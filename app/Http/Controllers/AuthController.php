@@ -52,7 +52,7 @@ class AuthController extends Controller
                     return $this->error('Credenciais incorretas', 403);
                 }
 
-                $this->logout($user);
+                // $this->logout($user);
                 Auth::login($user);
 
                 return $this->success('Wellcome ' . $user->name, [
