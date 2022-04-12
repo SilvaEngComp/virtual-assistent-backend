@@ -25,15 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('v1')->group(function () {
-    Route::prefix('users')->group(function () {
-        Route::get('/', [UserController::class, 'index']);
-    });
-
     Route::prefix('topics')->group(function () {
-        Route::get('/', [TopicController::class, 'index']);
-    });
-
-    Route::prefix('tags')->group(function () {
         Route::get('/', [TopicController::class, 'index']);
     });
 });
@@ -60,6 +52,10 @@ Route::prefix('v3')->group(
             Route::prefix('topics')->group(function () {
                 Route::get('/', [TopicController::class, 'index'])->name('getAllTopics');
                 Route::get('/{topic}', [TopicController::class, 'show']);
+                Route::post('/', [TopicController::class, 'store']);
+                Route::post('/{parent}', [TopicController::class, 'storeWithParent']);
+                Route::patch('/{topic}', [TopicController::class, 'update']);
+                Route::delete('/{topic}', [TopicController::class, 'destroy']);
             });
 
             Route::prefix('questions')->group(function () {
