@@ -26,7 +26,8 @@ class NlpController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return App\Http\Requests\NlpRequest
+     * @param App\Http\Requests\NlpRequest
+     * @return \Illuminate\Http\Response
      */
     public function index(NlpRequest $request)
     {
