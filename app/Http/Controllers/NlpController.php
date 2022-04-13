@@ -5,19 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Requests\NlpRequest;
 use App\Models\Nlp;
 use App\Traits\ApiResponser;
-use JoggApp\NaturalLanguage\NaturalLanguage;
-use JoggApp\NaturalLanguage\NaturalLanguageClient;
+
 
 class NlpController extends Controller
 {
 
     use ApiResponser;
 
-
-    private static function NaturalLanguageFactory(): NaturalLanguage
-    {
-        return new NaturalLanguage(new NaturalLanguageClient(config('naturallanguage')));
-    }
 
     /**
      * Display a listing of the resource.

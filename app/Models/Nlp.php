@@ -3,9 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use JoggApp\NaturalLanguage\NaturalLanguage;
+use JoggApp\NaturalLanguage\NaturalLanguageClient;
 
 class Nlp extends Model
 {
+
+
+
+    public static function NaturalLanguageFactory(): NaturalLanguage
+    {
+        return new NaturalLanguage(new NaturalLanguageClient(config('naturallanguage')));
+    }
     /**
      * Show the form for creating a new resource.
      *
