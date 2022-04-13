@@ -14,7 +14,7 @@ class NlpController extends Controller
     use ApiResponser;
 
 
-    private function NaturalLanguageFactory(): NaturalLanguage
+    private static function NaturalLanguageFactory(): NaturalLanguage
     {
         return new NaturalLanguage(new NaturalLanguageClient(config('naturallanguage')));
     }
