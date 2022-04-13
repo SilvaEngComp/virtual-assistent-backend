@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\ApiResponser;
 use Illuminate\Database\Eloquent\Model;
 use JoggApp\NaturalLanguage\NaturalLanguage;
 use JoggApp\NaturalLanguage\NaturalLanguageClient;
 
 class Nlp extends Model
 {
-
+    use ApiResponser;
 
 
     public static function NaturalLanguageFactory(): NaturalLanguage
