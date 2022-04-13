@@ -14,13 +14,10 @@ class NlpController extends Controller
 
     use ApiResponser;
 
-    private NaturalLanguage $naturalLanguage;
 
-    public function __construct()
+    private function NaturalLanguageFactory(): NaturalLanguage
     {
-
-
-        $this->naturalLanguage = new NaturalLanguage(new NaturalLanguageClient(config('naturallanguage')));
+        return new NaturalLanguage(new NaturalLanguageClient(config('naturallanguage')));
     }
 
     /**
@@ -31,8 +28,8 @@ class NlpController extends Controller
      */
     public function index(NlpRequest $request)
     {
-
-        $entities = $this->naturalLanguage->entities($request->input('text'));
+        $naturalLanguage = $this->NaturalLanguageFactory();
+        $entities = $naturalLanguage->entities($request->input('text'));
         $entitiesName = $this->costumizeEntities($entities);
         $answers = $this->getByAnswers($entitiesName);
         if (isset($answers)) {
