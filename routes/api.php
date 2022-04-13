@@ -70,7 +70,6 @@ Route::prefix('v3')->group(
                 Route::delete('/{question}', [QuestionController::class, "destroy"]);
             });
 
-
             Route::prefix('users')->group(function () {
                 Route::get("/", [UserController::class, "index"]);
                 Route::get("/{user}", [UserController::class, "show"]);

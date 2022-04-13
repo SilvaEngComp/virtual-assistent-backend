@@ -32,9 +32,7 @@ class NlpController extends Controller
     {
 
         $entities = $this->naturalLanguage->entities($request->input('text'));
-
         $entitiesName = $this->costumizeEntities($entities);
-
         $answers = $this->getByAnswers($entitiesName);
         if (isset($answers)) {
             return $answers;
