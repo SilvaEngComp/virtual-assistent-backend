@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Contracts\Validation\Validator;
 
-class QuestionUpdateRequest extends FormRequest
+class NlpRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,10 +26,7 @@ class QuestionUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required|int',
-            'description' => 'required|string|max:300',
-            'answare' => 'required|string|max:150',
-            'topic_id' => 'required|int'
+            "text" => "required"
         ];
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
@@ -21,4 +22,21 @@ class Question extends Model
     protected $hidden = [
         'created_at', 'updated_at',
     ];
+
+    public function parents()
+    {
+        return Topic::ancestorsAndSelf($this->topic_id)->pluck('name');
+    }
+
+    public function build(): array
+    {
+
+
+        return [
+            "id" => $this->id,
+            "description" => $this->description,
+            "answer" => $this->answer,
+            "parents" => $this->parents(),
+        ];
+    }
 }

@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nlp;
+use App\Http\Requests\NlpRequest;
 use App\Models\Question;
 use App\Models\Topic;
 use App\Traits\ApiResponser;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use JoggApp\NaturalLanguage\NaturalLanguage;
 use JoggApp\NaturalLanguage\NaturalLanguageClient;
 
@@ -28,9 +26,9 @@ class NlpController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return App\Http\Requests\NlpRequest
      */
-    public function index(Request $request)
+    public function index(NlpRequest $request)
     {
 
         $entities = $this->naturalLanguage->entities($request->input('text'));

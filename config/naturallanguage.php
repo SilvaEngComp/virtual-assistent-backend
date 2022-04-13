@@ -21,5 +21,5 @@ return [
     | Path to the json file containing the authentication credentials.
     |--------------------------------------------------------------------------
     */
-    'key_file_path' => base_path('virtual-assistent-347020-4abf77128d05.json'),
+    'key_file_path' => base_path('nplkey.json'),
 ];
