@@ -17,7 +17,7 @@ class CreateQuestionTable extends Migration
             $table->id();
             $table->unsignedBigInteger('topic_id');
             $table->text('description')->nullable();
-            $table->text('answare')->nullable();
+            $table->text('answer')->nullable();
             $table->timestamps();
 
 

@@ -127,7 +127,7 @@ class MenuController extends Controller
                 if ($topic) {
                     Question::create([
                         "description" => $question["description"],
-                        "answare" => $question["answare"],
+                        "answer" => $question["answer"],
                         "topic_id" => $topic->id
                     ]);
                 }

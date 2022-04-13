@@ -49,6 +49,10 @@ Route::prefix('v3')->group(
                 Route::post('/', [CsvController::class, 'store']);
             });
 
+            Route::prefix('nlp')->group(function () {
+                Route::get('/', [NlpController::class, 'index']);
+            });
+
             Route::prefix('topics')->group(function () {
                 Route::get('/', [TopicController::class, 'index'])->name('getAllTopics');
                 Route::get('/{topic}', [TopicController::class, 'show']);

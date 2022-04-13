@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "virtual-assistent-347020",
+  "private_key_id": "4abf77128d056a7b77332b1cb4e910b4e82267bc",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCn7mOQaqv8VnSi\niG/4XiC/HzV1L/CGTVFGqh8lXBqFAKltWn6IVWxl3msv7us+/1oqoFAoCfcEatNU\nbg4B3MZaNPdrLupYjzHG4pyFqc8v8iGnPZtbetJKhFbFuC9F64a/fzeBa9dGGFlA\nk3EQZnjhyp5d+H7KX3FpJxWHd4V9sIBY9gBPMw1P3yh7cul7P1ws63BbV5wUdRgT\nAR7sBSsxgQKut+Oad2MOfl9MoUziWQQNLPLwD17GjOS9KHU0Q64Up5v6qNcCXRFI\nqrtQGHPiGCC+6+TNJ/2ghiSMeJNIjXfB9hXAb74i2SnwSYBdFPgSaH/qmsYXXfQ1\neOUDpXN1AgMBAAECggEAGD0pAtnazDfgautdmhBgEqYbDbinM4NqdVQt3bMfIs53\nJhEXTW9jD4sclpUaQIQUDC4Kk9ToYitXKIsgG3W17aRSiBaD/ddhXG8uH37kqGt/\nHwgd6gTe4KGccrqEnEeEMhTXOqeJsZTnIRKHEdJwpUqdNDwfdO90y7Q3/88pJfx9\ng0WiotbwAXVQj15DFCtgQYwE5L7qv4JoOoyKuCXgkAGC5ZDJUsm2VE+b01HrWdT5\nIPtt1EHn0b/ldDAkg3F2+TA5kODAx0/m0nuxCpZdTtncmne6GawfRukG/swAZKXq\n2B0siH47E+IGlAt7gb72AExCEZFZLW/EidTuVqQ/iwKBgQDaKPi+VqUUvTUZN6bY\nRkqG3dnBeqoljqAMu4ub9A6N6VUuAiWykFJiftRKMinmOwxBeTcK1VvMH7GjNpAB\nvtQ1zg22T7W8nZYovNK1o3pYEebZzgck2czBzqiob6vLGWPdmDr6I/pzyhJiz6ZH\n8tuSYQEJStyVUKrFhpCyEiwlBwKBgQDFDxcsOgfoBuBmr6IpeHBEtvgR4SgESv5c\n157v+OF/73+GYSfg6xpExa7sR/q0bM75OAbhTndUQSKkV9QXgsA6MJEU0mKLEU+E\neKtlIWxGgy5NK4eSKcYGTWX6cjXESHwd4GPvThBUuOaJegYv+oz5TLlHFFhR2kgD\nu2I/Uo8gowKBgEx2c8hyoeWE82llQgsnh9OBSmMv1RbYyGvuB96fScKfd4Vqpz/Q\nqa9v+IQQ1PKm24LPM2WOpmAC88Xax9p0wfghwliV04LKUOjyVX/oTmczzw+j0Ikv\n9T4wapiumy3SNlhilLk7hvqyZoNPeF5bVm4VpcFWBb4nydL1eR2QlPxdAoGAHxWs\nUBuvV5iOGWSnLeeDvjMmmptr1pGF4ltZBP27hJThBu+YfNBZSnPsjfUkxQVM+N8v\npqbcB/xmXIpGOJc1f3hdym0NgmZuprTqRH+rNsxGp4GwVwwj4qae6YzOknHksknN\nOdiUlui75P/MrhDV4BWMPHwnGnJWXdBXRSnezgUCgYAySTWw/cV1DP7Sun4J5+KK\nWI2RAmNctsIsWd4hEO3N54npbAPuyQa5dZf/3qiXUoXbwuj/RGFlhgkfehaA+R55\nO+a1Fqd0VF64yVwBTUvnLmnItSdYx9tEimsadtxvXkwQ2PycikDIRzUy2Cth+2eU\nkY+NCJrnZY578iNVaAeDKw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "eliabe-ufba@virtual-assistent-347020.iam.gserviceaccount.com",
+  "client_id": "108426796869530398603",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eliabe-ufba%40virtual-assistent-347020.iam.gserviceaccount.com"
+}

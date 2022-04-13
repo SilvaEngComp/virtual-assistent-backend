@@ -9,7 +9,7 @@ class Question extends Model
 
     protected $fillable = [
         "description",
-        "answare",
+        "answer",
         "topic_id"
     ];
 

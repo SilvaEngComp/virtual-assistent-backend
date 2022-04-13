@@ -62,7 +62,7 @@ class TopicController extends Controller
     public function show(Topic $topic)
     {
         if ($topic) {
-            return Topic::descendantsAndSelf($topic->id)->with('questions')->toTree();
+            return Topic::with('questions')->descendantsAndSelf($topic->id)->toTree();
         }
 
         return $this->error('Topic not found', 404);

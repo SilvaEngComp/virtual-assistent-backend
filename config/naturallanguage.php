@@ -14,12 +14,12 @@ return [
     | The id of project created in the Google Cloud Platform console.
     |--------------------------------------------------------------------------
     */
-    'project_id' => env('NATURAL_LANGUAGE_PROJECT_ID', 'sample-12345'),
+    'project_id' => env('NATURAL_LANGUAGE_PROJECT_ID'),
 
     /*
     |--------------------------------------------------------------------------
     | Path to the json file containing the authentication credentials.
     |--------------------------------------------------------------------------
     */
-    'key_file_path' => base_path('composer.json'),
+    'key_file_path' => base_path('virtual-assistent-347020-4abf77128d05.json'),
 ];

@@ -8,7 +8,7 @@ class CsvQuestion
 {
 
     private string $description;
-    private string $answare;
+    private string $answer;
     private array $path;
 
     function __construct(array $csvData)
@@ -28,7 +28,7 @@ class CsvQuestion
     {
         return [
             "description" => $this->getDescription(),
-            "answare" => $this->getAnsware(),
+            "answer" => $this->getAnsware(),
             "path" => $this->getPath(),
         ];
     }
@@ -54,21 +54,21 @@ class CsvQuestion
     }
 
     /**
-     * Get the value of answare
+     * Get the value of answer
      */
     public function getAnsware()
     {
-        return $this->answare;
+        return $this->answer;
     }
 
     /**
-     * Set the value of answare
+     * Set the value of answer
      *
      * @return  self
      */
-    public function setAnsware($answare)
+    public function setAnsware($answer)
     {
-        $this->answare = $answare;
+        $this->answer = $answer;
 
         return $this;
     }
