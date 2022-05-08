@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Contracts\Validation\Validator;
 
 class UpdateTagRequest extends FormRequest
 {
@@ -26,5 +28,16 @@ class UpdateTagRequest extends FormRequest
         return [
             //
         ];
+    }
+
+    public function failedValidation(Validator $validator)
+    {
+        $json = [
+            'status' => 'Validation Error',
+            'message' => 'Do you must fix that fields',
+            'errors' => $validator->getMessageBag()
+        ];
+        $response = response($json, 400);
+        throw (new ValidationException($validator, $response))->status(400);
     }
 }

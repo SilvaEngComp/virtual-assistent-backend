@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Responser;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreUserRequest;
+use App\Traits\ApiResponser;
 
 class UserController extends Controller
 {
+
+    use ApiResponser;
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +21,7 @@ class UserController extends Controller
     {
         // $users = User::get();
         // return Responser::success(null, 'Users');
-        return "List of Users";
+        return User::get();
     }
 
     /**
@@ -26,9 +30,12 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+        $payload = $request->all();
+        $payload["password"] = bcrypt($payload["password"]);
+        $user = User::create($payload);
+        return $user;
     }
 
     /**
@@ -39,7 +46,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        if ($user) {
+            return $user;
+        }
     }
 
     /**
@@ -51,7 +60,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        if ($user) {
+            $user->name = $request->input('name');
+            $user->email = $request->input('email');
+            $user->password = $request->input('password');
+            $user->update();
+            return $this->success('User updated', $user);
+        }
+
+        return $this->error('User not found', 404);
     }
 
     /**
@@ -62,6 +79,9 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        if ($user) {
+            $user->delete();
+        }
     }
 }
+//pushtest

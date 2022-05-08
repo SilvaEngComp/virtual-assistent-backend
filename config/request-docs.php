@@ -10,7 +10,7 @@ return [
     * Route where request docs will be served from
     * localhost:8080/request-docs
     */
-    'url' => '',
+    'url' => 'https://virtual-assistent-backend.herokuapp.com/',
     'middlewares' => [
         //Example
         // \App\Http\Middleware\NotFoundWhenProduction::class,

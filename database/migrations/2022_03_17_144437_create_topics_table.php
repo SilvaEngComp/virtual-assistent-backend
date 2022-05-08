@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Kalnoy\Nestedset\NestedSet;
 
 class CreateTopicsTable extends Migration
 {
@@ -15,11 +16,9 @@ class CreateTopicsTable extends Migration
     {
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('type_id')->nullable();
-            $table->text('description');
+            $table->text('name');
+            $table->nestedSet();
             $table->timestamps();
-
-            $table->foreign('type_id')->references('id')->on('types')->onDelete('set null')->onUpdate('cascade');
         });
     }
 
@@ -30,6 +29,8 @@ class CreateTopicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('topics');
+        Schema::create('topics', function (Blueprint $table) {
+            $table->dropNestedSet();
+        });
     }
 }
